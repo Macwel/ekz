@@ -55,5 +55,34 @@ class Components{
     public function zp($zp){
         print_r($zp);
     }
+<form method="POST">
+        <input type="date" id="start" name="trip-start"
+               value="2021-01-01"
+               min="2021-01-01" max="2021-09-25">
+<!--        <input type="submit" name="submit" value="Подсчёт">-->
+    </form>
 
+    <script>
+
+        const validate = dateString => {
+            
+            const day = (new Date(dateString)).getDate();
+            for(){
+                arr = ['dateString'=='2021-07-05']
+                if()
+            }
+            if (dateString=='2021-07-05' || dateString=='2021-07-06' || dateString=='2021-07-07' || day==6) {
+                return false;
+            }
+            return true;
+        }
+
+        // Sets the value to '' in case of an invalid date
+        document.querySelector('input').onchange = evt => {
+
+            if (!validate(evt.target.value)) {
+                evt.target.value = '';
+            }
+        }
+    </script>
 }
